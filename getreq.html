@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--  here with hlp of post method i have to add new students in api
+        for fetchung data that i entered in api write
+        console.log(req.body)
+        const user=new Student(req.body) req.body means here i am requesting data inside body
+        res.send("hello from other side")
+        here ab main aise likhu then undefine whow hoga at console.og we wll not get json data here undefined bcz this here data is in pure json format
+        so agr mujhe json data cahhie i have to call express.json in order to recognize  incoming  request objedt as json object.it is also called middllware
+        in order to reconize incoming data as json data
+        
+        using async awat we can also do
+        app.post("/students",async(req,res)=>{
+        try{
+          const user=new Student(req.body)
+          const createUser=await user.save()
+          res.status(201).send(createUser)
+        }
+        catch(res){
+        res.status(400).send(err)
+    }
+}) 
+-->
+
+
+
+    <!-- we use get req to read data -->
+    <!-- if i want to get /read data of particular person then then we will use id here-->
+    <!-- chahe hm koi bhi curd operation perform kren hmara root hmesha same rehna ie /students in this
+    
+    /students/:id means in 
+     //    when i will write only req.params then i will get {"id": "624e8b8677a42d740750a7d4"}
+       //    when i will write only req.params.id then i will get 624e8b8677a42d740750a7d4 only
+    //    res.send(_id)
+    // in get in postman write localhost:3000/students/624e8b8677a42d740750a7d4-->
+
+
+
+
+    <!-- handle delete request in api -->
+    
+    
+    <!-- put/patch req for updating data -->
+    <!-- wiite {"name":"Arshnoor khurana"} in req.body and send here in postman name will be
+    updated but not in db so to do this if i write new:true means the mmonet i press on send then usi time mujhe current updated data show hojega-->
+
+
+    <!-- Express Router in RESTful API using this how we can simplify our api code more
+    here in this i want to add my roots like get post in differnt file so that mera app.js clean dikhe
+    so to use express router in application we need to crate new router-->
+</body>
+</html>
